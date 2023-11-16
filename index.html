@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Day 08 Home Task</title>
+    <style>
+        body {
+            width: 95%;
+            height: 100%;
+            font-family: cursive;
+            background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+        }
+
+        h1 {
+            text-align: center;
+            color: whitesmoke;
+            font-size: 25px;
+        }
+
+        /* Button Styling Start Here */
+        .btn-grad {
+            display: flex;
+            /* justify-content: center;
+            align-items: center; */
+            margin-top: 15px;
+        }
+
+        .btn-grad button {
+            background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97 51%, #DD5E89 100%);
+            margin: 10px;
+            padding: 20px;
+            text-transform: uppercase;
+            background-size: 200% auto;
+            color: white;
+            border-radius: 10px;
+            width: 200px;
+            height: 60px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+            cursor: pointer;
+            border: none;
+            font-weight: 900;
+        }
+
+        .btn-grad button:hover {
+            background-position: right center;
+            color: black;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        /* Button Styling End Here */
+
+
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            /* Initial border radius */
+            border-radius: 0;
+            /* Initial border style */
+            border: none;
+        }
+
+        #mainDiv {
+            display: flex;
+        }
+
+        .subDiv {
+            width: 50%;
+            cursor: pointer;
+            transition: width 0.5s;
+            /* Add a smooth transition effect */
+        }
+
+        .subDiv img {
+            width: 100%;
+            height: 200px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Java Day 08 Home Task</h1>
+    <div class="btn-grad">
+        <button id="myButton">Div Changer</button>
+        <button id="resetButton">Div Reset</button>
+        <div id="myDiv"></div>
+    </div>
+    <div class="btn-grad">
+        <button id="showListButton">Show Ul List</button>
+        <ul id="myList"></ul>
+    </div>
+    <div id="mainDiv">
+        <div class="subDiv" id="firstSubDiv" onclick="adjustWidth('firstSubDiv')">
+            <img src="img1.png" alt="image">
+        </div>
+        <div class="subDiv" id="secondSubDiv" onclick="adjustWidth('secondSubDiv')">
+            <img src="img2.jpg" alt="image">
+        </div>
+    </div>
+    <div class="btn-grad">
+        <button id="printData">Print Table Data</button>
+    </div>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Institute</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
